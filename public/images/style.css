@@ -1,0 +1,317 @@
+    @font-face {font-family: 'Nimbus'; src: url('../fonts/NimbusSanL-Reg.otf') format('opentype'); font-weight: normal; font-style: normal; }
+    @font-face {font-family: 'Nimbus'; src: url('../fonts/NimbusSanL-Bol.otf') format('opentype'); font-weight: bold; font-style: normal; }
+    @font-face {font-family: 'Nimbus'; src: url('../fonts/NimbusSanL-RegIta.otf') format('opentype'); font-weight: normal; font-style: italic; }
+    @font-face {font-family: 'Helvetica'; src: url('../fonts/Helvetica.ttf') format('truetype');font-weight: normal;font-style: normal;}
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    
+    *{margin: 0;padding: 0;box-sizing: border-box; scroll-behavior: smooth;}
+    html, body{ overflow-x: hidden; max-width: 100%;}
+    li{list-style-type: none;}
+    a{text-decoration: none; font-family: 'Nimbus', sans-serif;}
+    img{max-width: 100%; display: block;}
+    p{font-family: 'Nimbus', sans-serif;}
+    span{font-family: 'Nimbus', sans-serif;}
+    .container{max-width: 1350px; margin: 0 auto; padding: 0 10px; width: 100%;}
+    h1, h2, h3, h4, h5, h6{font-family: 'Playfair Display', serif;}
+
+/* ===============================
+        Banner Section CSS
+   =============================== */
+    .banner_section {background: url(../images/banner-image.png) no-repeat center center; background-size: cover;}
+    .banner_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+    .banner_section .banner_main .banner_top {display: flex; justify-content: space-between; }
+    .banner_section .banner_main .banner_top .logo img {margin: 50px 50px 0 0; }
+    .banner_section .banner_main .banner_top .banner_heading {margin: 80px 0 0 100px; text-align: center; }
+    .banner_section .banner_main .banner_top .banner_heading h1 {font-weight: 500; font-size: 37px; line-height: 100%; text-transform: uppercase; margin-bottom: 17px; }
+    .banner_section .banner_main .banner_top .banner_heading h2 {font-weight: 400; font-size: 46px; line-height: 100%; margin-bottom: 17px; }
+    .banner_section .banner_main .banner_top .banner_heading p {color: #375F77;  font-weight: 700; font-size: 20px; line-height: 100%; }
+.banner_section .banner_main .banner_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 30px;
+}
+.banner_section .banner_main .banner_bottom .banner_button {padding-left: 100px; }
+    .banner_section .banner_main .banner_bottom .banner_button a {padding: 17px 25px; background: #fff; border-radius: 15px;  font-weight: 700; font-size: 20px; line-height: 100%; color: #375F77; margin-bottom: 10px; display: block; }
+    .banner_section .banner_main .banner_bottom .all_inclusive_box {padding: 26px 35px; background: #fff; border-radius: 15px 0 0 15px; }
+    .banner_section .banner_main .banner_bottom .all_inclusive_box h3 {font-weight: 600; font-size: 26px; line-height: 100%; margin-bottom: 10px; color: #020202; }
+    .banner_section .banner_main .banner_bottom .all_inclusive_box h3 span {font-weight: 400;font-family: 'Playfair Display', serif; }   
+    .banner_section .banner_main .banner_bottom .all_inclusive_box p { font-weight: 400; font-size: 20px; line-height: 100%; text-transform: lowercase; color: #020202;  }
+    .banner_section .banner_main .banner_bottom .all_inclusive_box p span { font-weight: 700; font-size: 37px; line-height: 100%; text-transform: uppercase; color: #375F77; }
+/* ==========================================
+    Plan Your Retreat Section CSS
+   ========================================== */
+    .plan_your_retreat_section {padding: 80px 0; background-color: #F7FCFFBF; }
+    .plan_your_retreat_section .plan_your_retreat_heading{font-family: 'Nimbus', sans-serif; font-weight: 400; font-style: Italic; font-size: 36px; line-height: 36px; text-align: center; text-transform: uppercase; margin-bottom: 40px; }
+    .plan_your_retreat_section form {display: flex; gap: 1.16%; width: 100%; }
+    .plan_your_retreat_section .date-wrap{display:flex; gap:14px; flex-wrap:wrap; }
+    .plan_your_retreat_section .input_fill, .plan_your_retreat_section .date-pill {width: 16%; }
+    .plan_your_retreat_section input {font-family: 'Nimbus', sans-serif; height: 51px; background: #F2F2F2; border-radius: 10px; border: none; border: 1px solid #D8D8D8; font-weight: 400; font-size: 18px; line-height: 100%; padding: 0 20px; outline: none; width: 100%; }
+    .plan_your_retreat_section button {font-weight: 700; font-size: 20px; line-height: 100%; text-align: center; text-transform: uppercase; color: #fff; border: none; padding: 0 50px; height: 51px; border-radius: 10px; background-color: #375F77; cursor: pointer;}
+    .plan_your_retreat_section .date-pill {position: relative; flex: 1; height: 51px; border: 1px solid #d6d6d6; border-radius: 10px; background: #f5f5f5; display: flex; align-items: center; padding: 0 42px 0 14px; cursor: pointer; }
+    .plan_your_retreat_section .date-text{width:100%; border:none; outline:none; background:transparent; font-size:14px; color:#222; cursor:pointer; }
+    .plan_your_retreat_section .date-label {position: absolute; left: 10px; top: 14px; font-size: 18px; background: transparent; padding: 0 6px; color: #5a5a5a; border-radius: 6px; }
+    .plan_your_retreat_section .date-ic{position:absolute; right:12px; top:57%; transform:translateY(-50%); color:#6b6b6b; pointer-events:none; }
+    .plan_your_retreat_section .date-real{position:absolute; inset:0; opacity:0; pointer-events:none; }
+      
+/* ==========================================
+    Makes the Perfect Section CSS
+   ========================================== */
+    .makes_perfect_section {padding: 70px 0 50px; }
+    .makes_perfect_section .section_heding{max-width: 790px; margin: 0 auto 40px; }
+    .makes_perfect_section .section_heding h2 {font-weight: 400; font-size: 32px; line-height: 100%; text-align: center; margin-bottom: 20px; }
+    .makes_perfect_section .section_heding p{font-weight: 400; font-size: 18px; line-height: 24px; text-align: center; }
+    .makes_perfect_section .box {padding: 40px 35px 25px; color: #fff; border-radius: 15px; position: relative; z-index: 0; margin-bottom: 20px; }
+    .makes_perfect_section .box::after{position: absolute; content: ''; width: 100%; height: 100%; top: 0; left: 0; background: linear-gradient(90deg, rgba(2, 2, 2, 0.5) 0%, rgba(2, 2, 2, 0) 100%); z-index: 0; border-radius: 15px; }
+    .makes_perfect_section .box > * {position: relative; z-index: 2; }
+    .makes_perfect_section .box h3 {font-weight: 500; font-size: 24px; line-height: 24px; margin-bottom: 12px; }
+    .makes_perfect_section .box .box_text {font-weight: 400; font-size: 18px; line-height: 24px; margin-bottom: 40px; max-width:500px;}
+    .makes_perfect_section .box .box_point_text{font-weight: 700; font-size: 18px; line-height: 20px; font-style: italic; }
+
+/* ==========================================
+  Want to Feel Your Section CSS
+  ========================================== */
+    .want_feel_section {padding: 50px 0;}
+    .want_feel_main {display: flex; justify-content: space-between; align-items: center; }
+    .want_feel_text {text-align: center; width: 50%; }
+    .want_feel_img {width: 50%; }
+    .want_feel_img img{border-radius: 15px; }
+    .want_feel_text h2 {font-weight: 400; font-size: 36px; line-height: 100%; margin-bottom: 5px;}
+    .want_feel_text h3 {font-weight: 100;font-size: 50px;line-height: 50px;text-decoration: underline;text-decoration-thickness: 2px;margin-bottom: 40px; }
+    .want_feel_text p {font-weight: 400; font-size: 18px; line-height: 24px; max-width: 490px; margin: 0 auto 20px; }    
+
+/* ==========================================
+  The 5-Day Bridal Journey Section CSS
+  ========================================== */
+    .bridal_journey_section {padding: 45px 0; background: url(../images/bridal-journey.png) no-repeat center center; background-size: cover; }
+    .bridal_journey_section h2 {font-weight: 400; font-size: 32px; line-height: 32px; text-align: center; margin-bottom: 20px; }
+    .bridal_journey_section p {font-weight: 400; font-size: 18px; line-height: 100%; text-align: center; }
+    .bridal_journey_main {padding: 60px 0; display: flex; justify-content: space-between; }
+    .bridal_journey_main .bridal_journey_box {width: 18.8%; }
+    .bridal_journey_main .bridal_journey_box h3 {font-weight: 700; font-size: 22px; line-height: 100%; text-align: center; color: #375F77; margin-bottom: 10px; }
+    .bridal_journey_main .bridal_journey_box h4 {font-weight: 400; font-size: 22px; line-height: 100%; text-align: center; margin-bottom: 20px; }
+    .bridal_journey_main .bridal_journey_box .image_box {width: 100%; position: relative; color: #fff; }
+    .bridal_journey_main .bridal_journey_box .image_box img{border-radius: 15px; }
+    .bridal_journey_main .bridal_journey_box .image_box .image_inner_text {background: linear-gradient(180deg, #375F77 0%, rgba(55, 95, 119, 0.6) 53.37%, rgba(55, 95, 119, 0.5) 100%); border-radius: 15px; padding: 45px 25px 25px; position: absolute; top: 0; height: 100%; opacity: 0; transition: all 0.7s ease-in-out; }
+    .bridal_journey_main .bridal_journey_box .image_box:hover .image_inner_text{opacity: 1; transition: all 0.7s ease-in-out; cursor: pointer; }
+    .bridal_journey_main .bridal_journey_box .image_box .image_inner_text h5 {font-family: 'Nimbus', sans-serif; font-weight: 500; font-size: 18px; line-height: 24px; text-align: center; font-style: italic; margin-bottom: 10px; }
+    .bridal_journey_main .bridal_journey_box .image_box .image_inner_text>p{margin-bottom: 60px; }
+    .bridal_journey_main .bridal_journey_box .image_box .image_inner_text p {font-weight: 400; font-size: 16px; line-height: 100%; text-align: center; line-height: 20px; }
+    .bridal_journey_section a {font-weight: 700;font-size: 28px;line-height: 100%;text-align: center;padding: 25px 80px;color: #fff;border-radius: 20px;background: #375F77;display: block;max-width: fit-content; margin: 0 auto;}
+
+/* ==========================================
+   Who Can Join Section CSS
+  ========================================== */
+    .join_section {padding: 80px 0; background: #F7FCFFBF;}
+    .join_section .join_main {display: flex; }
+    .join_section .join_main  .join_heading {width: 30%; padding: 0px 120px 0 0; }
+    .join_section .join_main .join_heading h2 {font-weight: 500; font-size: 36px; line-height: 48px; }
+    .join_section .join_main .join_text {width: 70%; padding-left: 50px; }
+    .join_section .join_main .join_text p {font-weight: 400; font-size: 28px; line-height: 100%; padding: 25px 0; border-top: 1px solid #333; }
+    .join_section .join_main .join_text p:first-child{padding-top: 0; border: none; }
+    .image_section{background: url(../images/join_under_section_image.jpg) no-repeat center center; background-size: cover; height: 464px; }
+
+/* ==========================================
+   Testimonial Section CSS
+  ========================================== */
+    .testimonial_section {padding: 130px 0 80px 280px; }
+    .testimonial_main {display: flex; }
+    .testimonial_heading {width: 20%; }
+    .testimonial_text {width: 80%; }
+    .owl-theme .owl-dots, .owl-theme .owl-nav {text-align: center; -webkit-tap-highlight-color: transparent; margin-top: -25px; }
+    .owl-theme .owl-dots .owl-dot span {width: 30px !important; height: 2px !important; margin: 0 !important; background: #D6D6D6; display: block; border-radius: 0 !important; }
+    .owl-theme .owl-nav {margin-top: 0; gap: 110px; display: flex !important ; justify-content: center; }
+    .owl-next img {opacity: 0.2; }
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {background: #000 !important; }
+    .owl-theme .owl-nav [class*=owl-]:hover {background: transparent !important; color: #000; text-decoration: none; }
+    .owl-theme .owl-nav .owl-next:hover img{opacity: 1; }
+    .owl-theme .owl-nav .owl-prev:hover img{filter: brightness(0); }
+    .owl-nav {position: absolute; left: -325px; top: 265px; }
+    .owl-dots {position: absolute; left: -275px; top: 300px; }
+    .testimonial_heading img {margin-bottom: 40px; }
+    .testimonial_heading h2 {font-weight: 400; font-size: 38px; line-height: 48px; }
+    .owl-carousel .owl-item img {display: block; width: auto !important; }
+    .inner_box {display: flex; gap: 10px; align-items: center; }
+    .t-star {display: flex; gap: 2px; }
+    .testimonial_main .box {background: #D9D9D9; padding: 45px 35px; border-radius: 15px; box-shadow: 4px 4px 4px 0px #00000040; min-height: 345px; }
+    .owl-carousel .owl-stage-outer {padding-bottom: 20px; }
+    .testimonial_main .box p {font-weight: 400; font-size: 18px; line-height: 24px; margin-bottom: 70px; }
+    .text_box h4 {font-weight: 700; font-size: 18px; line-height: 100%; font-family: 'Nimbus', sans-serif; font-style: italic; text-transform: uppercase; margin-bottom: 5px; }
+
+/* ==========================================
+   Begin Your  Section CSS
+  ========================================== */
+    .begin_your_section {padding: 80px 0; }
+    .begin_your_section .begin_your_main {display: flex; align-items: center; flex-wrap: wrap;}
+    .begin_your_section .begin_your_main .begin_your_image {width: 50%; }
+    .begin_your_section .begin_your_main .begin_your_image img{border-radius: 20px; }
+    .begin_your_section .begin_your_main .begin_your_text {width: 50%; padding-left: 45px; }
+    .begin_your_section .begin_your_main .begin_your_text h2 {font-weight: 400; font-size: 28px; line-height: 32px; margin-bottom: 10px; }
+    .begin_your_section .begin_your_main .begin_your_text h3 {font-size: 34px; line-height: 100%; text-transform: uppercase; padding-bottom: 5px; border-bottom: 1px solid #000; width: fit-content; margin-bottom: 30px; font-weight: 500; }
+    .begin_your_section .begin_your_main .begin_your_text h3 span {font-weight: 400; font-size: 28px; line-height: 100%; text-transform: lowercase; font-family: 'Playfair Display', serif; }
+    .begin_your_section .begin_your_main .begin_your_text .begin_text {font-weight: 400; font-size: 18px; line-height: 24px; max-width: 480px; margin-bottom: 50px; }
+    .begin_your_section .begin_your_main .begin_your_text .experience_test {font-weight: 400; font-size: 18px; line-height: 24px; color: #375F77; margin-bottom: 7px; }
+    .begin_your_section .begin_your_main .begin_your_text .experience_test span {font-weight: 700; font-size: 18px; line-height: 100%; color: #000; }
+    .begin_your_section .begin_your_main .begin_your_text .just_text {font-weight: 400; font-size: 18px; line-height: 100%; margin-bottom: 10px; color: #020202; }
+    .begin_your_section .begin_your_main .begin_your_text .just_text span{font-weight: 700; font-size: 34px; line-height: 100%; text-transform: uppercase; color: #375F77; text-shadow: 5px 5px 15px #0000001A; }
+    .begin_your_section .begin_your_main .begin_your_text strong {font-weight: 700; font-size: 18px; line-height: 100%; font-style: italic; }
+    .begin_your_section .begin_your_main .begin_your_text .begin_your_button {font-weight: 400; font-size: 18px; line-height: 100%; text-align: center; text-transform: uppercase; color: #fff; background-color: #375F77; padding: 17px 50px; display: block; max-width: 375px; border-radius: 15px; line-height: 24px; margin-top: 75px; }
+
+/* ==========================================
+   FAQ's Section CSS
+  ========================================== */
+    .faq_section{padding: 60px 0; }
+    .faq-title {margin-bottom: 45px; font-weight: 400; font-size: 32px; line-height: 100%; text-align: center; }
+    .faq-item{padding:40px 45px; background:#3f6477; color:#fff; border-radius:6px; margin-bottom:15px; overflow:hidden; transition:0.3s; box-shadow:0 3px 10px rgba(0,0,0,0.1); }
+    .faq-question span{padding-bottom: 10px; }
+    .faq-item.active .faq-question span {border-bottom: 1px solid #FFFFFF; }
+    .faq-question{font-family: "Inter", sans-serif; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap: 20px; font-weight: 600; font-size: 18px; line-height: 130%; letter-spacing: 0px; }
+    .faq-icon{width:26px; height:26px; min-width: 26px;min-height: 26px; border-radius:50%; background:#fff; color:#3f6477; display:flex; justify-content:center; align-items:center; font-weight:bold; transition:0.3s; }
+    .faq-answer{max-height:0; overflow:hidden; background:#3f6477; transition:max-height 0.35s ease; }
+    .faq-answer p {font-family: "Inter", sans-serif; margin: 15px 0 20px; font-weight: 600; font-size: 18px; line-height: 130%; }
+    .faq-item.active .faq-answer{max-height:200px; }
+    .faq-icon img {transform:rotateX(180deg); }
+    .faq-item.active .faq-icon img {transform:rotateX(0deg);}
+
+/* ==========================================
+   Footer Section CSS
+  ========================================== */
+    .footer_section{background-color: #375F77; }
+    .footer_main {display: flex; justify-content: space-between; }
+    .footer_main a {color: #fff; padding: 3px 0; font-size: 16px; font-weight: 300; }
+    .footer_logo {width: 13%; }
+    .footer_link {width: 20%; }
+    .footer_address {width: 35%; }
+    .footer_section {padding: 80px 0 0; }
+    .footer_main h3 {font-size: 28px; color: #fff; font-weight: 600; text-transform: capitalize; border-bottom: 1px solid #fff; padding: 0 0 5px 0; margin-bottom: 30px; }
+    .contact_box {display: flex; align-items: center; gap: 10px; }
+    .media_box {display: flex; gap: 10px; margin-top: 30px; }
+    .footer_link li {margin-bottom: 5px; }
+    .media_box a {padding: 12px !important; border: 1px solid #fff; }
+    .contact_box {display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .copy_right {color: #fff;font-size: 18px;}
+    .copy_right_box {display: flex;justify-content: space-between; align-items: center; padding: 30px 0;border-top: 1px solid #fff; margin-top: 40px;}
+    .copy_right_box a { color: #fff;text-decoration: underline;}
+    .copy_right a{ color: #fff; font-size: 18px; font-weight: 700; text-decoration: none;}
+
+
+    .number-ctn {  font-family: "Noto Serif", serif;}
+
+
+   @media (max-width:1680px) {
+      .testimonial_section {padding: 130px 0 80px 170px; }
+   }
+
+   @media (max-width: 1440px) {
+      .testimonial_section {padding: 130px 0 80px 60px; }
+      .owl-nav {position: absolute; left: -280px; top: 265px; }
+      .owl-dots {position: absolute; left: -230px; top: 300px; }
+   }
+
+   @media (max-width: 1280px) {
+      .testimonial_section {padding: 130px 0 80px 10px; }
+      .owl-nav {left: -260px; }
+      .owl-dots {left: -210px; }
+      .bridal_journey_main .bridal_journey_box {width: 19.8%; min-width: 250px;}
+  }
+
+  @media (max-width: 1024px){
+      .banner_section .banner_main .banner_top .banner_heading {margin: 80px 0 0 10px; }
+      .banner_section .banner_main .banner_top .logo img {margin: 50px 10px 0 0; }
+      .banner_section .banner_main .banner_bottom .banner_button {padding-left: 10px; }
+      .plan_your_retreat_section {padding: 50px 0; }
+      .plan_your_retreat_section .input_fill, .plan_your_retreat_section .date-pill {width: 31%; }
+      .plan_your_retreat_section form {flex-wrap: wrap; justify-content: space-between; row-gap: 13px; }
+      .makes_perfect_section {padding: 50px 0 50px; }
+      .want_feel_text {padding-right: 20px; }
+      .bridal_journey_main {flex-wrap: wrap; justify-content: center; gap: 30px; }
+      .bridal_journey_main .bridal_journey_box {width: 25%; }
+      .testimonial_text {width: 75%; }
+      .testimonial_heading {width: 25%; }
+      .owl-dots {left: -225px; }
+      .join_section {padding: 50px 0; background: #F7FCFFBF; }
+      .image_section {height: 300px; }
+      .testimonial_section {padding: 50px 20px 60px; }
+      .begin_your_section {padding: 50px 0; }
+      .faq_section {padding: 50px 0; }
+      .footer_section {padding: 50px 0; }
+  }
+
+  @media (max-width: 768px){
+
+      .testimonial_heading {width: 35%; }
+      .testimonial_text {width: 65%; }
+      .join_section .join_main {display: flex; flex-wrap: wrap; }
+      .join_section .join_main .join_heading {width: 100%; padding: 0px 0 0 0; text-align: center; margin-bottom: 30px; }
+      .join_section .join_main .join_text {width: 100%; padding-left: 0; text-align: center; }
+      .join_section .join_main .join_text p {font-weight: 400; font-size: 24px; line-height: 100%; padding: 15px 0; border-top: 1px solid #333; }
+      .begin_your_section .begin_your_main .begin_your_image {width: 100%; display: flex; justify-content: center; }
+      .begin_your_section .begin_your_main .begin_your_text {width: 100%; padding-left: 0; margin-top: 30px; }
+      .begin_your_section .begin_your_main .begin_your_text {width: 100%; padding-left: 0; margin-top: 30px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+      .banner_section .banner_main .banner_top .banner_heading h1 {font-size: 28px; }
+      .banner_section .banner_main .banner_top .banner_heading h2 {font-size: 38px; }
+      .plan_your_retreat_section .plan_your_retreat_heading {font-size: 28px; }
+      .plan_your_retreat_section .input_fill {width: 100%; }
+      .plan_your_retreat_section .date-pill {width: 100%; } 
+      .want_feel_main {flex-direction: column-reverse; }
+      .want_feel_img {width: 100%; display: flex; justify-content: center; }
+      .want_feel_text {text-align: center; width: 100%; padding: 0; margin-top: 30px; }
+      .bridal_journey_section a {font-size: 20px;padding: 15px 40px;}
+      .footer_main {display: flex; justify-content: space-between; flex-wrap: wrap; row-gap: 30px; }
+      .footer_logo {width: 48%; }
+      .footer_link {width: 48%; }
+      .footer_address {width: 48%; }
+      .owl-theme .owl-nav {margin-top: 10px; left: 40%;bottom: -180px; }
+      .owl-dots {display: none; }
+      .owl-nav img {width: 30px; }
+          
+      .testimonial_main {display: flex; flex-direction: column; }
+      .testimonial_heading {width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center; }
+      .testimonial_text {width: 100%; padding-top: 30px; }
+  }
+
+  @media (max-width: 480px){
+      
+        .banner_section {background: url(../images/banner-img-mobile.webp) no-repeat center center; background-size: cover; height: 100vh;}
+        .banner_section .banner_main .banner_top .banner_heading h1 {font-size: 24px;}
+        .banner_section .banner_main .banner_top .banner_heading h2 {font-size: 30px;}
+        .banner_section .banner_main .banner_top .banner_heading p {font-size: 15px;}
+        .banner_section .banner_main .banner_bottom .banner_button a {font-size: 18px;}
+        .banner_section .banner_main .banner_bottom .all_inclusive_box p span {font-size: 25px;}
+        .banner_section .banner_main .banner_bottom .all_inclusive_box h3 {margin-bottom: 15px;font-size: 23px;}
+        .banner_section .banner_main .banner_top .logo { margin-left: auto;}
+        .banner_section .banner_main .banner_top .logo img {margin: 40px 10px 10px 0; max-width: 80px;}
+        .banner_section .banner_main .banner_top {flex-direction: column-reverse; justify-content: center; align-items: center; padding: 0 10px; }
+      .banner_section .banner_main .banner_top .banner_heading {margin: 0; margin-top: 20px;text-align: left; }
+      .banner_section .banner_main .banner_bottom {padding-top: 250px; padding-bottom: 50px; flex-direction: column; align-items: start; gap: 15px; }
+      .banner_section .banner_main .banner_bottom .all_inclusive_box {text-align: start; border-radius: 0 20px 20px 0; padding: 20px 35px;}
+      .bridal_journey_main .bridal_journey_box .image_box .image_inner_text { opacity: 1;}
+    .copy_right_box {flex-direction: column; gap: 10px;}
+          
+      .want_feel_section {padding: 0px 0 50px; }
+      .want_feel_text h3 {font-size: 38px; }
+      .want_feel_text h2 {font-size: 28px; }
+      .join_section .join_main .join_heading h2 {font-size: 28px; }
+      .join_section .join_main .join_text p {font-size: 18px; }
+      .begin_your_section {padding: 0 0 50px; }
+      .footer_logo {width: 100%; }
+      .footer_link {width: 100%; }
+      .footer_address {width: 100%; }
+      .faq-item {padding: 20px 15px;}
+      .plan_your_retreat_section button {width: 100%; }
+      
+      .footer_logo img {width: 125px;}
+     
+    .owl-carousel .owl-nav {left: 88px;bottom: -106px;}
+    .testimonial_section { padding: 50px 20px 80px; }
+        
+
+
+  }

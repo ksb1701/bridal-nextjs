@@ -47,9 +47,14 @@ export default function Testimonial() {
         <div className="w-[80%] relative">
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={0}
-            slidesPerView={1}
-            // Replicating your Owl Carousel structure exactly
+            spaceBetween={19} /* Increased from 0 to give the boxes breathing room */
+            slidesPerView={3} /* Changed from 1 to show all three cards */
+            breakpoints={{
+              /* Responsive design so it doesn't break on mobile */
+              320: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 30 },
+              1024: { slidesPerView: 3, spaceBetween: 30 },
+            }}
             navigation={{
               nextEl: '.custom-next',
               prevEl: '.custom-prev',
@@ -57,7 +62,6 @@ export default function Testimonial() {
             pagination={{
               el: '.custom-pagination',
               clickable: true,
-              // Mimicking your specific dot styling: 30x2px blocks
               renderBullet: function (index, className) {
                 return `<span class="${className} w-7.5! h-0.5! m-0! bg-[#D6D6D6] rounded-none! block transition-colors"></span>`;
               },

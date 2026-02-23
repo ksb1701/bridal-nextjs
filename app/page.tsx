@@ -1,5 +1,7 @@
+import BeginYour from "./components/BeginYour";
 import BridalJourney from "./components/BridalJourney";
 import CanJoin from "./components/CanJoin";
+import FAQs from "./components/FAQs";
 import FeelYourBest from "./components/FeelYourBest";
 import InquiryForm from "./components/InquiryForm";
 import Testimonial from "./components/Testimonial";
@@ -18,6 +20,9 @@ export default function Home() {
         style={{ backgroundImage: "url('/images/join_under_section_image.jpg')" }}
       />
       <Testimonial />
+      <BeginYour />
+      <InquiryForm heading="ENQUIRE NOW" />
+      <FAQs />
     </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter, Noto_Serif } from "next/font/google"; // Added Inter
 import "./globals.css";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 
 const playfairDisplayFont = Playfair_Display({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className={`${notoSerifFont.variable} ${interFont.variable} ${playfairDisplayFont.variable} font-sans`}>
         <Banner />
         {children}
+        <Footer />
       </body>
     </html>
   );

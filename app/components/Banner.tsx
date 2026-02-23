@@ -18,12 +18,9 @@ export default function Banner() {
           
           <div className="mt-12.5 mr-12.5">
             <Link href="https://trewellness.in/">
-              <Image 
-                src="/images/logo.png" 
-                alt="Tre Wellness Logo" 
-                width={93}
-                height={67}
-                priority 
+              <Image
+                src="/images/logo.png" alt="Tre Wellness Logo"
+                width={93} height={67} priority
               />
             </Link>
           </div>
