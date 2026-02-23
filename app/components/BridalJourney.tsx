@@ -16,10 +16,10 @@ export default function BridalJourney() {
         </div>
 
         {/* Journey Main Flex Container */}
-        <div className="py-15 flex justify-between">
+        <div className="py-10 flex justify-between">
           
           {/* Day 1 */}
-          <div className="w-[18.8%]">
+          <div className="w-[18%]">
             <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-2.5">
               DAY <span className="number-ctn">1</span>
             </h3>
@@ -44,7 +44,7 @@ export default function BridalJourney() {
           </div>
 
           {/* Day 2 */}
-          <div className="w-[18.8%]">
+          <div className="w-[18%]">
             <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-2.5">
               DAY <span className="number-ctn">2</span>
             </h3>
@@ -68,7 +68,7 @@ export default function BridalJourney() {
           </div>
 
           {/* Day 3 */}
-          <div className="w-[18.8%]">
+          <div className="w-[18%]">
             <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-2.5">
               DAY <span className="number-ctn">3</span>
             </h3>
@@ -92,7 +92,7 @@ export default function BridalJourney() {
           </div>
 
           {/* Day 4 */}
-          <div className="w-[18.8%]">
+          <div className="w-[18%]">
             <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-2.5">
               DAY <span className="number-ctn">4</span>
             </h3>
@@ -116,7 +116,7 @@ export default function BridalJourney() {
           </div>
 
           {/* Day 5 */}
-          <div className="w-[18.8%]">
+          <div className="w-[18%]">
             <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-2.5">
               DAY <span className="number-ctn">5</span>
             </h3>
