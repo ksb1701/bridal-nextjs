@@ -42,7 +42,7 @@ export default function Banner() {
               All-inclusive <span className="font-normal">Stay</span>
             </h3>
             <p className="font-normal text-[20px] leading-none lowercase text-[#020202]">
-              <span className="font-bold text-[37px] leading-none uppercase text-brand-blue">₹14,999 </span> 
+              <span className="font-inter font-bold text-[37px] leading-none uppercase text-brand-blue">₹14,999 </span> 
               per person, per night
             </p>
           </div>

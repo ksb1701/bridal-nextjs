@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-/* New config, changed from tailwind.something.something to just using globals.css */
 @theme {
   --color-brand-blue: #375F77;
-  --font-playfairDisplay: var(--font-playfairDisplay);
-  --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair-next);
+  --font-inter: var(--font-inter-next);
+  --font-noto: var(--font-noto-next);
 }
 
 /* 2. Global Resets & Behaviors */
@@ -12,7 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom container? Just imported for now */
 @layer components {
   .container {
     max-width: 1350px;
@@ -22,9 +21,18 @@ html {
   }
 }
 
-/* Playfair_Display to all headings */
 @layer base {
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-playfairDisplay), serif;
+    /* Use the Next variable directly. No extra ', serif' */
+    font-family: var(--font-playfair-next);
+  }
+
+  a, p {
+    /* Use the Next variable directly. No extra ', serif' */
+    font-family: var(--font-inter-next);
+  }
+
+  span {
+    font-family: var(--font-noto-next);
   }
 }

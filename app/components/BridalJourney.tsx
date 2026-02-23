@@ -10,7 +10,7 @@ export default function BridalJourney() {
           <h2 className="font-normal text-[32px] leading-8 text-center mb-5">
             The <span className="number-ctn">5</span>-Day Bridal Journey
           </h2>
-          <p className="font-normal text-[18px] leading-none text-center">
+          <p className="font-normal pt-1 text-[17.5px] leading-none text-center">
             A thoughtfully paced reset before your wedding festivities begin.
           </p>
         </div>

@@ -4,11 +4,11 @@ export default function FeelYourBest() {
   return (
     <section className="py-12.5">
       {/* Assuming standard container setup, added mx-auto to center it */}
-      <div className="container mx-auto">
+      <div className="container mx-auto pt-5">
         <div className="flex justify-between items-center">
           
           {/* Text Container */}
-          <div className="text-center w-1/2">
+          <div className="text-center w-1/2 pl-23">
             <h2 className="font-normal text-[36px] leading-none mb-1.25">
               Want to Feel Your Best
             </h2>
@@ -29,8 +29,8 @@ export default function FeelYourBest() {
             <Image
               src="/images/want-to-feel-your.png" 
               alt="Want to feel your best"
-              width={600}
-              height={400}
+              width={618}
+              height={412}
               className="rounded-[15px] max-w-full h-auto" 
             />
           </div>

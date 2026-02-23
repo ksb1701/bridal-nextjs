@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-brand-blue pt-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-25">
         
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-0">
@@ -26,19 +26,19 @@ export default function Footer() {
               quick links
             </h3>
             <ul>
-              <li className="mb-1.25"><a href="https://trewellness.in/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Home</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/packages/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Packages</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/therapies/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Therapies</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/nutrition-dining/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Nutrition & Dining</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/accommodation/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Accommodation</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/frequently-asked-question/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Frequently Asked Question</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/contact/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Contact</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/about/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">About Us</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/offers/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Offers</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/blog/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Blog</a></li>
-              <li className="mb-1.25"><a href="#" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Events & Collaborators</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/features-publication/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Features & Publication</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/gallery/" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Gallery</a></li>
+              <li><a href="https://trewellness.in/" className="text-white text-[16px] pb-0.5 font-light block hover:opacity-80">Home</a></li>
+              <li><a href="https://trewellness.in/packages/" className="text-white text-[16px] pb-0.5 font-light block hover:opacity-80">Packages</a></li>
+              <li><a href="https://trewellness.in/therapies/" className="text-white text-[16px] pb-0.5 font-light block hover:opacity-80">Therapies</a></li>
+              <li><a href="https://trewellness.in/nutrition-dining/" className="text-white text-[16px] pb-0.5 font-light block hover:opacity-80">Nutrition & Dining</a></li>
+              <li><a href="https://trewellness.in/accommodation/" className="text-white text-[16px] pb-0.5 font-light block hover:opacity-80">Accommodation</a></li>
+              <li><a href="https://trewellness.in/frequently-asked-question/" className="text-white text-[16px] pb-0.5 font-light block hover:opacity-80">Frequently Asked Question</a></li>
+              <li><a href="https://trewellness.in/contact/" className="text-white text-[16px] pb-0.5 font-light block hover:opacity-80">Contact</a></li>
+              <li><a href="https://trewellness.in/about/" className="text-white pb-0.5 text-[16px] font-light block hover:opacity-80">About Us</a></li>
+              <li><a href="https://trewellness.in/offers/" className="text-white pb-0.5 text-[16px] font-light block hover:opacity-80">Offers</a></li>
+              <li><a href="https://trewellness.in/blog/" className="text-white pb-0.5 text-[16px] font-light block hover:opacity-80">Blog</a></li>
+              <li><a href="#" className="text-white pb-0.5 text-[16px] font-light block hover:opacity-80">Events & Collaborators</a></li>
+              <li><a href="https://trewellness.in/features-publication/" className="text-white pb-0.5 text-[16px] font-light block hover:opacity-80">Features & Publication</a></li>
+              <li><a href="https://trewellness.in/gallery/" className="text-white pb-0.5 text-[16px] font-light block hover:opacity-80">Gallery</a></li>
             </ul>
           </div>
 
@@ -48,13 +48,13 @@ export default function Footer() {
               packages
             </h3>
             <ul>
-              <li className="mb-1.25"><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Wellness Experience</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Mini Detox</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Major Detox</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Preventive Care</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Ailment Management</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Lifestyle Management</a></li>
-              <li className="mb-1.25"><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.75 text-[16px] font-light block hover:opacity-80">Holistic Healing</a></li>
+              <li><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.5 text-[16px] font-light block hover:opacity-80">Wellness Experience</a></li>
+              <li><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.5 text-[16px] font-light block hover:opacity-80">Mini Detox</a></li>
+              <li><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.5 text-[16px] font-light block hover:opacity-80">Major Detox</a></li>
+              <li><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.5 text-[16px] font-light block hover:opacity-80">Preventive Care</a></li>
+              <li><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.5 text-[16px] font-light block hover:opacity-80">Ailment Management</a></li>
+              <li><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.5 text-[16px] font-light block hover:opacity-80">Lifestyle Management</a></li>
+              <li><a href="https://trewellness.in/packages/#package-tabs" className="text-white py-0.5 text-[16px] font-light block hover:opacity-80">Holistic Healing</a></li>
             </ul>
           </div>
 
@@ -66,21 +66,21 @@ export default function Footer() {
             
             <div className="flex items-center gap-2.5 mb-2.5">
               <Image src="/images/location.png" alt="Footer Address Icon" width={20} height={20} className="shrink-0" />
-              <a href="#" className="text-white py-0.75 text-[16px] font-light hover:opacity-80">
+              <a href="#" className="text-white py-0.5 text-[16px] font-light hover:opacity-80">
                 Survey number 121A, Kolkunda, Telangana 501202​
               </a>
             </div>
             
             <div className="flex items-center gap-2.5 mb-2.5">
               <Image src="/images/email.png" alt="Footer Email Icon" width={16} height={16} className="shrink-0" />
-              <a href="mailto:hello@trewellness.in" className="text-white py-0.75 text-[16px] font-light hover:opacity-80">
+              <a href="mailto:hello@trewellness.in" className="text-white py-0.5 text-[16px] font-light hover:opacity-80">
                 hello@trewellness.in
               </a>
             </div>
             
             <div className="flex items-center gap-2.5 mb-2.5">
               <Image src="/images/phone-call.png" alt="Footer Call Icon" width={16} height={16} className="shrink-0" />
-              <a href="tel:+918712623060" className="text-white py-0.75 text-[16px] font-light hover:opacity-80">
+              <a href="tel:+918712623060" className="text-white py-0.5 text-[16px] font-light hover:opacity-80">
                 +91 87126 23060
               </a>
             </div>
