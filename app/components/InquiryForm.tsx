@@ -54,7 +54,7 @@ export default function InquiryForm({ heading }: InquiryFormProps) {
           
           <form
             onSubmit={handleSubmit(onSubmit)} id="eform" name="eform"
-            className="flex gap-[1.16%] w-full flex-wrap lg:flex-nowrap"
+            className="flex gap-[1.3%] w-85/96 mx-auto flex-wrap lg:flex-nowrap"
           >
             {/* Full Name */}
             <div className="w-[16%] relative flex-1">
@@ -86,8 +86,11 @@ export default function InquiryForm({ heading }: InquiryFormProps) {
             {/* Wedding Date */}
             <div className="w-[16%] relative flex-1 flex items-center bg-[#F2F2F2] rounded-[10px] border border-[#D8D8D8] px-5 h-12.75">
               <input
-                className="bg-transparent outline-none w-full font-['Nimbus',sans-serif] text-[16px] cursor-pointer"
-                type="date" id="wedding_date" placeholder="Wedding Date*" {...register("wedding_date")}
+                className={`${baseInputClass} bg-transparent! border-none! h-full! px-0! outline-none!`}
+                type="text" id="wedding_date" placeholder="Wedding Date"
+                
+                onFocus={(e) => (e.target.type = "date")}
+                {...register("wedding_date", {onBlur: (e) => {if (!e.target.value) e.target.type = "text";}})}
               />
               <ErrorMsg message={errors.wedding_date?.message} />
             </div>
@@ -95,15 +98,18 @@ export default function InquiryForm({ heading }: InquiryFormProps) {
             {/* Retreat Date */}
             <div className="w-[16%] relative flex-1 flex items-center bg-[#F2F2F2] rounded-[10px] border border-[#D8D8D8] px-5 h-12.75">
               <input
-                className="bg-transparent outline-none w-full font-['Nimbus',sans-serif] text-[16px] cursor-pointer"
-                type="date" id="retreat_date" placeholder="Retreat Date*" {...register("retreat_date")} 
+                className={`${baseInputClass} bg-transparent! border-none! h-full! px-0! outline-none!`}
+                type="text" id="retreat_date" placeholder="Retreat Dates*"
+                
+                onFocus={(e) => (e.target.type = "date")}
+                {...register("retreat_date", {onBlur: (e) => {if (!e.target.value) e.target.type = "text";}})}
               />
               <ErrorMsg message={errors.retreat_date?.message} />
             </div>
 
             <button 
               type="submit"
-              className="font-bold text-[20px] leading-none text-center uppercase text-white px-12.5 h-12.75 rounded-[10px] bg-brand-blue cursor-pointer hover:bg-[#2d4e62] transition-colors duration-200"
+              className="font-inter font-bold text-[20px] leading-none text-center uppercase text-white px-12.5 h-12.75 rounded-[10px] bg-brand-blue cursor-pointer hover:bg-[#2d4e62] transition-colors duration-200"
             >
               Submit
             </button>

@@ -1,150 +1,104 @@
-import Image from "next/image";
+import Image from 'next/image';
+
+const journeyData = [
+  {
+    day: 1,
+    title: "Initiation & Grounding",
+    image: "/images/day_1.png",
+    hoverTitle: "Step gently into your wellness journey",
+    text1: "Light naturopathy, herbal infusions & gentle yoga prepare the body & mind for the journey ahead.",
+    text2: "Helps release fatigue and gently prepare the body & mind for recovery."
+  },
+  {
+    day: 2,
+    title: "Ease & Elimination",
+    image: "/images/day_2.png",
+    hoverTitle: "Cleanse from within, shine outside",
+    text1: "Herbal therapies & restorative yoga support detoxification & help gently rebalance inner energy.",
+    text2: "Supports detoxification, reduces heaviness & restores lightness in the body."
+  },
+  {
+    day: 3,
+    title: "Radiance & Rejuvenation",
+    image: "/images/day_3.png",
+    hoverTitle: "Glow that lasts beyond the wedding day",
+    text1: "Ayurvedic massages, hair therapies & rejuvenating facials, along with yoga & meditation, restore vitality & natural glow.",
+    text2: "Enhances skin vitality while relieving deep-seated tension & fatigue."
+  },
+  {
+    day: 4,
+    title: "Gentle Energizing",
+    image: "/images/day_4.png",
+    hoverTitle: "Step into your wedding with serenity and shine",
+    text1: "Aromatherapy, herbal body polish & meditation complete the journey with calm & bridal radiance.",
+    text2: "Leaves you calm, refreshed & confidently prepared for your wedding celebrations."
+  },
+  {
+    day: 5,
+    title: "Bridal Bliss",
+    image: "/images/day_5.png",
+    hoverTitle: "Step gently into your wellness journey.",
+    text1: "Light naturopathy, herbal infusions & gentle yoga prepare the body & mind for the journey ahead.",
+    text2: "Helps release fatigue and gently prepare the body & mind for recovery."
+  }
+];
 
 export default function BridalJourney() {
   return (
     <section className="py-11.25 bg-[url('../public/images/bridal-journey.png')] bg-no-repeat bg-center bg-cover">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         
         {/* Section Heading */}
         <div className="mb-5">
           <h2 className="font-normal text-[32px] leading-8 text-center mb-5">
-            The <span className="number-ctn">5</span>-Day Bridal Journey
+            The <span>5</span>-Day Bridal Journey
           </h2>
           <p className="font-normal pt-1 text-[17.5px] leading-none text-center">
             A thoughtfully paced reset before your wedding festivities begin.
           </p>
         </div>
 
-        {/* Journey Main Flex Container */}
-        <div className="py-10 flex justify-between">
+        {/* Journey Main Grid Container */}
+        <div className="w-21/24 mx-auto mb-5 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4.25">
           
-          {/* Day 1 */}
-          <div className="w-[18%]">
-            <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-2.5">
-              DAY <span className="number-ctn">1</span>
-            </h3>
-            <h4 className="font-normal text-[22px] leading-none text-center mb-5">
-              Initiation & Grounding
-            </h4>
-            {/* Image Box with group hover */}
-            <div className="w-full aspect-11/15 relative text-white group">
-              <Image src="/images/day_1.png" fill alt="" className="rounded-[15px] object-cover" />
-              <div className="bg-[linear-gradient(180deg,#375F77_0%,rgba(55,95,119,0.6)_53.37%,rgba(55,95,119,0.5)_100%)] rounded-[15px] px-6.25 pt-11.25 pb-6.25 absolute top-0 left-0 w-full h-full opacity-0 transition-all duration-700 ease-in-out group-hover:opacity-100 cursor-pointer">
-                <h5 className="font-['Nimbus',sans-serif] font-medium text-[18px] leading-6 text-center italic mb-2.5">
-                  Step gently into your wellness journey
-                </h5>
-                <p className="font-normal text-[16px] leading-5 text-center mb-15">
-                  Light naturopathy, herbal infusions & gentle yoga prepare the body & mind for the journey ahead.
-                </p>
-                <p className="font-normal text-[16px] leading-5 text-center">
-                  Helps release fatigue and gently prepare the body & mind for recovery.
-                </p>
+          {journeyData.map((item) => (
+            <div key={item.day} className="w-full flex flex-col">
+              <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-0.5">
+                DAY <span>{item.day}</span>
+              </h3>
+              <h4 className="font-normal text-[22px] leading-none text-center mb-2 min-h-11 flex items-center justify-center">
+                {item.title}
+              </h4>
+              
+              {/* Image Box with group hover */}
+              <div className="w-full aspect-11/15 relative text-white group overflow-hidden rounded-[15px]  cursor-pointer">
+                <Image 
+                  src={item.image} 
+                  fill 
+                  alt={`Day ${item.day} - ${item.title}`} 
+                  className="object-cover" 
+                />
+                <div className="bg-[linear-gradient(180deg,#375F77_0%,rgba(55,95,119,0.9)_53.37%,rgba(55,95,119,0.9)_100%)] px-6.25 pt-11.25 pb-6.25 absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 flex flex-col justify-start">
+                  <h5 className="font-['Nimbus',sans-serif] font-medium text-[18px] leading-6 text-center italic mb-2.5">
+                    {item.hoverTitle}
+                  </h5>
+                  <p className="font-normal text-[16px] leading-5 text-center mb-15">
+                    {item.text1}
+                  </p>
+                  <p className="font-normal text-[16px] leading-5 text-center">
+                    {item.text2}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* Day 2 */}
-          <div className="w-[18%]">
-            <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-2.5">
-              DAY <span className="number-ctn">2</span>
-            </h3>
-            <h4 className="font-normal text-[22px] leading-none text-center mb-5">
-              Ease & Elimination
-            </h4>
-            <div className="w-full aspect-11/15 relative text-white group">
-              <Image src="/images/day_2.png" fill alt="" className="rounded-[15px] object-cover" />
-              <div className="bg-[linear-gradient(180deg,#375F77_0%,rgba(55,95,119,0.6)_53.37%,rgba(55,95,119,0.5)_100%)] rounded-[15px] px-6.25 pt-11.25 pb-6.25 absolute top-0 left-0 w-full h-full opacity-0 transition-all duration-700 ease-in-out group-hover:opacity-100 cursor-pointer">
-                <h5 className="font-['Nimbus',sans-serif] font-medium text-[18px] leading-6 text-center italic mb-2.5">
-                  Cleanse from within, shine outside
-                </h5>
-                <p className="font-normal text-[16px] leading-5 text-center mb-15">
-                  Herbal therapies & restorative yoga support detoxification & help gently rebalance inner energy.
-                </p>
-                <p className="font-normal text-[16px] leading-5 text-center">
-                  Supports detoxification, reduces heaviness & restores lightness in the body.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Day 3 */}
-          <div className="w-[18%]">
-            <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-2.5">
-              DAY <span className="number-ctn">3</span>
-            </h3>
-            <h4 className="font-normal text-[22px] leading-none text-center mb-5">
-              Radiance & Rejuvenation
-            </h4>
-            <div className="w-full aspect-11/15 relative text-white group">
-              <Image src="/images/day_3.png" fill alt="" className="rounded-[15px] object-cover" />
-              <div className="bg-[linear-gradient(180deg,#375F77_0%,rgba(55,95,119,0.6)_53.37%,rgba(55,95,119,0.5)_100%)] rounded-[15px] px-6.25 pt-11.25 pb-6.25 absolute top-0 left-0 w-full h-full opacity-0 transition-all duration-700 ease-in-out group-hover:opacity-100 cursor-pointer">
-                <h5 className="font-['Nimbus',sans-serif] font-medium text-[18px] leading-6 text-center italic mb-2.5">
-                  Glow that lasts beyond the wedding day
-                </h5>
-                <p className="font-normal text-[16px] leading-5 text-center mb-15">
-                  Ayurvedic massages, hair therapies & rejuvenating facials, along with yoga & meditation, restore vitality & natural glow.
-                </p>
-                <p className="font-normal text-[16px] leading-5 text-center">
-                  Enhances skin vitality while relieving deep-seated tension & fatigue.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Day 4 */}
-          <div className="w-[18%]">
-            <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-2.5">
-              DAY <span className="number-ctn">4</span>
-            </h3>
-            <h4 className="font-normal text-[22px] leading-none text-center mb-5">
-              Gentle Energizing
-            </h4>
-            <div className="w-full aspect-11/15 relative text-white group">
-              <Image src="/images/day_4.png" fill alt="" className="rounded-[15px] object-cover" />
-              <div className="bg-[linear-gradient(180deg,#375F77_0%,rgba(55,95,119,0.6)_53.37%,rgba(55,95,119,0.5)_100%)] rounded-[15px] px-6.25 pt-11.25 pb-6.25 absolute top-0 left-0 w-full h-full opacity-0 transition-all duration-700 ease-in-out group-hover:opacity-100 cursor-pointer">
-                <h5 className="font-['Nimbus',sans-serif] font-medium text-[18px] leading-6 text-center italic mb-2.5">
-                  Step into your wedding with serenity and shine
-                </h5>
-                <p className="font-normal text-[16px] leading-5 text-center mb-15">
-                  Aromatherapy, herbal body polish & meditation complete the journey with calm & bridal radiance.
-                </p>
-                <p className="font-normal text-[16px] leading-5 text-center">
-                  Leaves you calm, refreshed & confidently prepared for your wedding celebrations.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Day 5 */}
-          <div className="w-[18%]">
-            <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-2.5">
-              DAY <span className="number-ctn">5</span>
-            </h3>
-            <h4 className="font-normal text-[22px] leading-none text-center mb-5">
-              Bridal Bliss
-            </h4>
-            <div className="w-full aspect-11/15 relative text-white group">
-              <Image src="/images/day_5.png" fill alt="" className="rounded-[15px] object-cover" />
-              <div className="bg-[linear-gradient(180deg,#375F77_0%,rgba(55,95,119,0.6)_53.37%,rgba(55,95,119,0.5)_100%)] rounded-[15px] px-6.25 pt-11.25 pb-6.25 absolute top-0 left-0 w-full h-full opacity-0 transition-all duration-700 ease-in-out group-hover:opacity-100 cursor-pointer">
-                <h5 className="font-['Nimbus',sans-serif] font-medium text-[18px] leading-6 text-center italic mb-2.5">
-                  Step gently into your wellness journey.
-                </h5>
-                <p className="font-normal text-[16px] leading-5 text-center mb-15">
-                  Light naturopathy, herbal infusions & gentle yoga prepare the body & mind for the journey ahead.
-                </p>
-                <p className="font-normal text-[16px] leading-5 text-center">
-                  Helps release fatigue and gently prepare the body & mind for recovery.
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
 
         </div>
 
         {/* CTA Button */}
         <a 
           href="#form_bottom" 
-          className="font-bold text-[28px] leading-none text-center py-6.25 px-20 text-white rounded-[20px] bg-brand-blue block w-fit mx-auto"
+          className="font-bold text-[28px] leading-none text-center py-6.25 px-20 text-white rounded-[20px] bg-brand-blue block w-fit mx-auto transition-transform hover:scale-105"
         >
           Book Your Bridal Retreat Now
         </a>

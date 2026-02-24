@@ -43,7 +43,7 @@ export default function FAQs() {
         <h2 className="mb-11.25 text-center text-[32px] font-normal leading-none">
           FAQs
         </h2>
-        <div>
+        <div className="w-85/96 mx-auto">
           {faqData.map((faq, index) => {
             const isActive = activeIndex === index;
             return (
@@ -56,7 +56,7 @@ export default function FAQs() {
                   onClick={() => toggleFaq(index)}
                 >
                   <span
-                    className={`pb-2.5 ${
+                    className={`pb-2.5 font-inter ${
                       isActive ? "border-b border-white" : ""
                     }`}
                   >

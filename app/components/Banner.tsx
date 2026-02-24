@@ -10,10 +10,10 @@ export default function Banner() {
         <div className="flex justify-between">
           <div className="mt-20 ml-25 text-center">
             <h1 className="font-normal text-[37px] leading-none uppercase mb-4.25">Bridal Wellness Retreat</h1>
-            <h2 className="font-normal text-[46px] leading-none mb-4.25">
+            <h2 className="font-normal text-[46px] leading-none mb-5">
               <span className="font-notoSerif">5</span> Days of Natural Radiance
             </h2>
-            <p className="text-brand-blue font-bold text-[20px] leading-none">Holistic Renewal | Doctor-Guided Care | Lasting Balance</p>
+            <p className="text-brand-blue font-bold text-[20px] leading-none">Holistic Renewal <span className='font-semibold'>|</span> Doctor-Guided Care <span className='font-semibold'>|</span> Lasting Balance</p>
           </div>
           
           <div className="mt-12.5 mr-12.5">

@@ -1,10 +1,13 @@
 'use client';
 
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import Image from 'next/image'; // Assuming you want to use Next.js Image
+import Image from 'next/image';
 
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const testimonials = [
   {
@@ -25,83 +28,101 @@ const testimonials = [
 ];
 
 export default function Testimonial() {
+  // Using state to store DOM nodes makes external controls bulletproof in React
+  const [prevEl, setPrevEl] = useState<HTMLButtonElement | null>(null);
+  const [nextEl, setNextEl] = useState<HTMLButtonElement | null>(null);
+  const [paginationEl, setPaginationEl] = useState<HTMLDivElement | null>(null);
+
   return (
-    <section className="pt-32.5 pb-20 pl-70">
-      <div className="flex">
+    <section className="pt-32.5 pb-20 pl-70 pr-30">
+      <div className="flex flex-col lg:flex-row gap-8">
         
-        <div className="w-[20%] relative">
-          {/* FIX: If using next/image, width and height are strictly required. 
-              If you don't know the exact size, swap this back to a standard <img src="..." /> */}
+        {/* Left Column: Heading & Controls */}
+        <div className="w-full lg:w-[20%] flex flex-col relative">
           <Image 
             src="/images/testimonial_icon.png" 
             alt="Testimonial Icon" 
-            width={60} // Adjust to your actual image width
-            height={60} // Adjust to your actual image height
+            width={67} 
+            height={67} 
             className="mb-10" 
           />
-          <h2 className="font-normal text-[38px] leading-12">
+          <h2 className="font-normal text-[38px] leading-12 mb-10">
             Real <br /> Experiences <br /> at Trē
           </h2>
+
+          {/* Hidden entirely if Swiper locks the buttons (e.g., all 3 slides fit on desktop) */}
+          <div className="[&>*:has(.swiper-button-lock)]:hidden">
+            <div className="flex gap-15 mb-5 z-10">
+              
+              {/* Prev Button */}
+              <button 
+                ref={setPrevEl} 
+                className="transition-all cursor-pointer [&.swiper-button-disabled]:opacity-20 [&.swiper-button-disabled]:cursor-default hover:[&:not(.swiper-button-disabled)]:brightness-0"
+              >
+                 <Image src="/images/left_arrow.svg" alt="Prev" width={20} height={10} /> 
+              </button>
+
+              {/* Next Button */}
+              <button 
+                ref={setNextEl} 
+                className="transition-all cursor-pointer [&.swiper-button-disabled]:opacity-20 [&.swiper-button-disabled]:cursor-default hover:[&:not(.swiper-button-disabled)]:brightness-0"
+              >
+                 <Image src="/images/right_arrow.svg" alt="Next" width={20} height={10} />
+              </button>
+            </div>
+            
+            {/* Pagination */}
+            <div 
+              ref={setPaginationEl} 
+              className="flex gap-2 z-10 [&_.swiper-pagination-bullet-active]:bg-black!"
+            ></div>
+          </div>
         </div>
 
-        <div className="w-[80%] relative">
+        {/* Right Column: Swiper */}
+        <div className="w-full lg:w-[75%]">
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={19} /* Increased from 0 to give the boxes breathing room */
-            slidesPerView={3} /* Changed from 1 to show all three cards */
+            spaceBetween={20}
+            slidesPerView={3}
+            watchOverflow={true}
             breakpoints={{
-              /* Responsive design so it doesn't break on mobile */
               320: { slidesPerView: 1, spaceBetween: 20 },
               768: { slidesPerView: 2, spaceBetween: 30 },
               1024: { slidesPerView: 3, spaceBetween: 30 },
             }}
+            // Bind the state-managed DOM nodes here
             navigation={{
-              nextEl: '.custom-next',
-              prevEl: '.custom-prev',
+              prevEl,
+              nextEl,
             }}
             pagination={{
-              el: '.custom-pagination',
+              el: paginationEl,
               clickable: true,
               renderBullet: function (index, className) {
-                return `<span class="${className} w-7.5! h-0.5! m-0! bg-[#D6D6D6] rounded-none! block transition-colors"></span>`;
+                return `<span class="${className} w-7.5! h-0.5! m-0! bg-[#D6D6D6] rounded-none! block transition-colors cursor-pointer"></span>`;
               },
             }}
-            className="w-full pb-5"
+            className="w-full pb-5 h-full"
           >
             {testimonials.map((item) => (
-              <SwiperSlide key={item.id}>
-                <div className="bg-[#D9D9D9] p-[45px_35px] rounded-[15px] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] min-h-86.25">
+              <SwiperSlide key={item.id} className="h-auto">
+                <div className="bg-[#D9D9D9] p-[45px_35px] rounded-[15px] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.25)] h-full flex flex-col justify-between">
                   <p className="font-normal text-[18px] leading-6 mb-17.5">
                     {item.text}
                   </p>
                   
                   <div className="flex gap-2.5 items-center">
-                    {/* <img src="images/testimonial_image.png" alt="" /> */}
                     <div>
-                      <h4 className="font-bold text-[18px] leading-[100%] font-['Nimbus', sans-serif] italic uppercase mb-1.25">
+                      <h4 className="font-bold text-[18px] leading-[100%] font-inter italic uppercase mb-1.25">
                         {item.name}
                       </h4>
-                      {/* Star logic kept as comments per your HTML */}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-
-          {/* Nav & Dots mapped exactly to your CSS absolute positions (-325px / -275px) */}
-          <div className="custom-nav absolute -left-68 top-66.25 flex gap-15 z-10">
-            <button className="custom-prev hover:brightness-0 transition-all">
-               {/* Replace with your exact prev arrow image */}
-               <Image src="/images/left_arrow.svg" alt="Prev" width={20} height={10} /> 
-            </button>
-            <button className="custom-next opacity-20 hover:opacity-100 transition-all">
-               {/* Replace with your exact next arrow image */}
-               <Image src="/images/right_arrow.svg" alt="Next" width={20} height={10} />
-            </button>
-          </div>
-
-          <div className="custom-pagination absolute -left-68.75 top-75 flex gap-2 z-10 [&_.swiper-pagination-bullet-active]:bg-black!"></div>
         </div>
         
       </div>

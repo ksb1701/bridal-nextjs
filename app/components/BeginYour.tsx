@@ -41,7 +41,7 @@ export default function BeginYour() {
             
             <p className="font-normal text-[18px] leading-none mb-2.5 text-[#020202]">
               at just{" "}
-              <span className="font-bold text-[34px] leading-none uppercase text-brand-blue [text-shadow:5px_5px_15px_#0000001A]">
+              <span className="font-inter font-bold text-[34px] leading-none uppercase text-brand-blue [text-shadow:5px_5px_15px_#0000001A]">
                 ₹14,999
               </span>{" "}
               per person, per night,
