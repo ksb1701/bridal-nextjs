@@ -20,12 +20,12 @@ export default function Banner() {
             </p>
           </div>
           
-          <div className="ml-auto mt-[40px] mr-[10px] mb-[10px] xs:m-0 xs:mt-12.5 xs:mr-12.5">
+          <div className="ml-auto mt-10 mr-2.5 mb-2.5 xs:m-0 xs:mt-12.5 xs:mr-12.5">
             <Link href="https://trewellness.in/">
               <Image
                 src="/images/logo.png" alt="Tre Wellness Logo"
                 width={93} height={67} priority
-                className="w-[80px] xs:w-[93px] h-auto"
+                className="w-20 xs:w-23.25 h-auto"
               />
             </Link>
           </div>
@@ -33,7 +33,7 @@ export default function Banner() {
 
         {/* Banner Bottom */}
         {/* Mobile: Stacked column, padded top. Desktop: Spaced out bottom-aligned row */}
-        <div className="flex flex-col xs:flex-row justify-between items-start xs:items-end pt-[250px] xs:pt-0 pb-[50px] xs:pb-7.5 gap-[15px] xs:gap-0 w-full">
+        <div className="flex flex-col xs:flex-row justify-between items-start xs:items-end pt-62.5 xs:pt-0 pb-12.5 xs:pb-7.5 gap-3.75 xs:gap-0 w-full">
           
           <div className="pl-2.5 xs:pl-25">
             <Link 
@@ -45,8 +45,8 @@ export default function Banner() {
           </div>
           
           {/* Mobile: Anchored to the left edge (rounded-r). Desktop: Anchored to the right edge (rounded-l) */}
-          <div className="px-[35px] py-[20px] xs:px-8.75 xs:py-6.5 bg-white rounded-r-[20px] xs:rounded-r-none xs:rounded-l-[15px] text-left">
-            <h3 className="font-semibold text-[23px] xs:text-[26px] leading-none mb-[15px] xs:mb-2.5 text-[#020202]">
+          <div className="px-8.75 py-5 xs:px-8.75 xs:py-6.5 bg-white rounded-r-[20px] xs:rounded-r-none xs:rounded-l-[15px] text-left">
+            <h3 className="font-semibold text-[23px] xs:text-[26px] leading-none mb-3.75 xs:mb-2.5 text-[#020202]">
               All-inclusive <span className="font-normal">Stay</span>
             </h3>
             <p className="font-normal text-[20px] leading-none lowercase text-[#020202]">
