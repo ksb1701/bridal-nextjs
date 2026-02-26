@@ -10,9 +10,9 @@ export default function Banner() {
         {/* Mobile: Column-reverse puts the logo on top, text below it. Desktop: Row splits them left/right */}
         <div className="flex flex-col-reverse xs:flex-row justify-center xs:justify-between items-start px-2.5 xs:px-0">
           
-          <div className="mt-5 xs:mt-20 gap-2 xs:ml-25 text-left xs:text-center w-full xs:w-auto">
-            <h1 className="font-normal text-[24px] xs:text-[37px] leading-none uppercase mb-4.25 text-[#020202]">Bridal Wellness Retreat</h1>
-            <h2 className="font-normal text-[30px] xs:text-[46px] leading-none mb-5 text-[#020202]">
+          <div className="mt-5 xs:mt-20 xs:ml-3 gap-2 lg:ml-25 text-left xs:text-center w-full xs:w-auto">
+            <h1 className="font-normal text-[24px] xs:text[28px] md:text-[37px] leading-none uppercase mb-4.25 text-[#020202]">Bridal Wellness Retreat</h1>
+            <h2 className="font-normal text-[30px] xs:text-[38px] md:text-[46px] leading-none mb-5 text-[#020202]">
               <span className="font-notoSerif">5</span> Days of Natural Radiance
             </h2>
             <p className="text-brand-blue font-bold text-[15px] xs:text-[20px] leading-none">
@@ -35,7 +35,7 @@ export default function Banner() {
         {/* Mobile: Stacked column, padded top. Desktop: Spaced out bottom-aligned row */}
         <div className="flex flex-col xs:flex-row justify-between items-start xs:items-end pt-62.5 xs:pt-0 pb-12.5 xs:pb-7.5 gap-3.75 xs:gap-0 w-full">
           
-          <div className="pl-2.5 xs:pl-25">
+          <div className="pl-2.5 lg:pl-25">
             <Link 
               href="#form_bottom" 
               className="block px-6.25 py-4.25 bg-white rounded-[15px] font-bold text-[18px] xs:text-[20px] leading-none text-brand-blue xs:mb-2.5"
