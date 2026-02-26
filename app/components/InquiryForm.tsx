@@ -45,7 +45,7 @@ export default function InquiryForm({ heading }: InquiryFormProps) {
   const baseInputClass = "font-['Nimbus',sans-serif] h-[51px] bg-[#F2F2F2] rounded-[10px] border border-[#D8D8D8] font-normal text-[18px] leading-none px-[20px] outline-none w-full";
 
   return (
-    <section className="py-12.5 xs:py-20 bg-[#F7FCFFBF]">
+    <section className="py-12.5 lg:py-20 bg-[#F7FCFFBF]">
       <div className="container mx-auto px-4">
         <div className="w-full">
           <h2 className="font-['Nimbus',sans-serif] font-normal italic text-[28px] md:text-[36px] leading-9 text-center uppercase mb-10">

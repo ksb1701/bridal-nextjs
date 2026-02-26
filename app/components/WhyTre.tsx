@@ -27,8 +27,8 @@ export default function WhyTre() {
   ];
 
   return (
-    <section className="py-12.5 pt-17.5">
-      <div className="container mx-auto px-26">
+    <section className="py-12.5">
+      <div className="container mx-auto px-4 lg:px-26">
         {/* Section Heading */}
         <div className="max-w-197.5 mx-auto mb-10 text-center">
           <h2 className="font-normal text-[32px] leading-none mb-5">
