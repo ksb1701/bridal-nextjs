@@ -15,8 +15,8 @@ export default function Home() {
       <FeelYourBest />
       <BridalJourney />
       <CanJoin />
-      <section 
-        className="h-116 w-full bg-cover bg-center bg-no-repeat" 
+      <section
+        className="h-116 w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/images/join_under_section_image.jpg')" }}
       />
       <Testimonial />

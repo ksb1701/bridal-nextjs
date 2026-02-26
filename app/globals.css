@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 90rem;
+  --breakpoint-3xl: 105rem;
+
   --color-brand-blue: #375F77;
   --font-playfair: var(--font-playfair-next);
   --font-inter: var(--font-inter-next);
   --font-noto: var(--font-noto-next);
 }
 
-/* 2. Global Resets & Behaviors */
 html {
   scroll-behavior: smooth;
 }
@@ -22,17 +25,7 @@ html {
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-    /* Use the Next variable directly. No extra ', serif' */
-    font-family: var(--font-playfair-next);
-  }
-
-  a, p {
-    /* Use the Next variable directly. No extra ', serif' */
-    font-family: var(--font-inter-next);
-  }
-
-  span {
-    font-family: var(--font-noto-next);
-  }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-playfair-next); }
+  a, p { font-family: var(--font-inter-next); }
+  span { font-family: var(--font-noto-next); }
 }
