@@ -27,7 +27,7 @@ export default function WhyTre() {
   ];
 
   return (
-    <section className="py-12.5">
+    <section className="py-12.5 lg:pt-17.5 lg:pb-12.5">
       <div className="container mx-auto px-4 lg:px-26">
         {/* Section Heading */}
         <div className="max-w-197.5 mx-auto mb-10 text-center">
@@ -44,7 +44,7 @@ export default function WhyTre() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="relative px-8.75 pt-10 pb-6.25 text-white rounded-[15px] overflow-hidden z-0"
+              className="relative px-5 pt-6 pb-5 lg:px-8.75 lg:pt-10 lg:pb-6.25 text-white rounded-[15px] overflow-hidden z-0"
               style={{
                 background: `url(${feature.bgImage}) no-repeat center center`,
                 backgroundSize: 'cover',
@@ -58,10 +58,10 @@ export default function WhyTre() {
                 <h3 className="font-medium text-2xl leading-none mb-3">
                   {feature.title}
                 </h3>
-                <p className="font-normal text-lg leading-6 mb-10 max-w-125">
+                <p className="font-normal text-[18px] leading-6 mb-10 lg:max-w-125">
                   {feature.description}
                 </p>
-                <p className="font-bold text-lg leading-5 italic">
+                <p className="font-semibold text-lg leading-5 italic">
                   {feature.points}
                 </p>
               </div>

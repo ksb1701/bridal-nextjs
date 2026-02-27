@@ -3,13 +3,13 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-brand-blue pt-20">
-      <div className="container mx-auto px-25">
+      <div className="container md:mx-auto px-5 md:px-25">
         
         {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-0">
+        <div className="flex flex-col xs:flex-row xs:flex-wrap md:flex-nowrap justify-between gap-10">
           
           {/* Logo Section */}
-          <div className="w-full md:w-[13%]">
+          <div className="w-full xs:w-[45%] md:w-[13%]">
             <a href="https://trewellness.in/">
               <Image 
                 src="/images/tre_logo.webp" 
@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links Section */}
-          <div className="w-full md:w-[20%]">
+          <div className="w-full xs:w-[45%] md:w-[20%]">
             <h3 className="text-white text-[28px] font-semibold capitalize border-b border-white pb-1.25 mb-7.5">
               quick links
             </h3>
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
 
           {/* Packages Section */}
-          <div className="w-full md:w-[20%]">
+          <div className="w-full xs:w-[45%] md:w-[20%]">
             <h3 className="text-white text-[28px] font-semibold capitalize border-b border-white pb-1.25 mb-7.5">
               packages
             </h3>
@@ -59,7 +59,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Us Section */}
-          <div className="w-full md:w-[35%]">
+          <div className="w-full xs:w-[45%] md:w-[35%]">
             <h3 className="text-white text-[28px] font-semibold capitalize border-b border-white pb-1.25 mb-7.5">
               contact Us
             </h3>

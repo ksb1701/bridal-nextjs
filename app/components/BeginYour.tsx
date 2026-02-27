@@ -6,7 +6,7 @@ export default function BeginYour() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center">
           {/* Image Container */}
-          <div className="w-full pl-20 md:w-1/2 mb-10 md:mb-0">
+          <div className="w-full lg:pl-20 md:w-1/2 mb-10 md:mb-0">
             <Image 
               src="/images/gif-video.gif" alt="Bridal Wellness"
               className="rounded-[20px]" width={665} height={553} 
@@ -14,7 +14,7 @@ export default function BeginYour() {
           </div>
 
           {/* Text Container */}
-          <div className="w-full md:w-1/2 md:pl-11.25">
+          <div className="w-full text-center md:text-left md:w-1/2 md:pl-11.25">
             <h2 className="font-normal text-[28px] leading-8 mb-2.5">
               Begin Your
             </h2>

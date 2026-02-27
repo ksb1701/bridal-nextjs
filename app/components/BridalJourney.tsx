@@ -47,7 +47,7 @@ export default function BridalJourney() {
   return (
     <section className="py-11.25 bg-[url('../public/images/bridal-journey.png')] bg-no-repeat bg-center bg-cover">
       <div className="container mx-auto px-4">
-        
+
         {/* Section Heading */}
         <div className="mb-5">
           <h2 className="font-normal text-[32px] leading-8 text-center mb-5">
@@ -60,32 +60,36 @@ export default function BridalJourney() {
 
         {/* Journey Main Grid Container */}
         <div className="w-21/24 mx-auto mb-5 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4.25">
-          
+
           {journeyData.map((item) => (
-            <div key={item.day} className="w-full flex flex-col">
+            <div key={item.day} className="w-full max-w-65 mx-auto flex flex-col">
               <h3 className="font-bold text-[22px] leading-none text-center text-brand-blue mb-0.5">
                 DAY <span>{item.day}</span>
               </h3>
               <h4 className="font-normal text-[22px] leading-none text-center mb-2 min-h-11 flex items-center justify-center">
                 {item.title}
               </h4>
-              
-              {/* Image Box with group hover */}
-              <div className="w-full aspect-11/15 relative text-white group overflow-hidden rounded-[15px]  cursor-pointer">
-                <Image 
-                  src={item.image} 
-                  fill 
-                  alt={`Day ${item.day} - ${item.title}`} 
-                  className="object-cover" 
+
+              {/* Corrected Image Box */}
+              <div className="w-full aspect-11/15 relative text-white group overflow-hidden rounded-[15px] cursor-pointer">
+                <Image
+                  src={item.image}
+                  fill
+                  alt={`Day ${item.day} - ${item.title}`}
+                  className="object-cover"
                 />
-                <div className="bg-[linear-gradient(180deg,#375F77_0%,rgba(55,95,119,0.9)_53.37%,rgba(55,95,119,0.9)_100%)] px-6.25 pt-11.25 pb-6.25 absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 flex flex-col justify-start">
+
+                {/* Fixed overlay classes and opacity */}
+                <div className="bg-[linear-gradient(180deg,rgba(55,95,119,0.6)_0%,rgba(55,95,119,0.2)_50%,rgba(55,95,119,0.7)_100%)] px-6.25 pt-11.25 pb-6.25 absolute inset-0 opacity-100 xs:opacity-0 transition-opacity duration-325 ease-in-out group-hover:opacity-100 flex flex-col justify-start">
                   <h5 className="font-['Nimbus',sans-serif] font-medium text-[18px] leading-6 text-center italic mb-2.5">
                     {item.hoverTitle}
                   </h5>
-                  <p className="font-normal text-[16px] leading-5 text-center mb-15">
+                  <p className="font-normal text-[16px] leading-5 text-center">
                     {item.text1}
                   </p>
-                  <p className="font-normal text-[16px] leading-5 text-center">
+
+                  {/* mt-auto pushes this to the absolute bottom */}
+                  <p className="font-normal text-[16px] leading-5 text-center mt-auto">
                     {item.text2}
                   </p>
                 </div>
@@ -96,9 +100,9 @@ export default function BridalJourney() {
         </div>
 
         {/* CTA Button */}
-        <a 
-          href="#form_bottom" 
-          className="font-bold text-[28px] leading-none text-center py-6.25 px-20 text-white rounded-[20px] bg-brand-blue block w-fit mx-auto transition-transform hover:scale-105"
+        <a
+          href="#form_bottom"
+          className="font-bold text-[20px] md:text-[28px] leading-none text-center p-[15px_40px] md:py-6.25 md:px-20 text-white rounded-[20px] bg-brand-blue block w-fit mx-auto transition-transform hover:scale-105"
         >
           Book Your Bridal Retreat Now
         </a>

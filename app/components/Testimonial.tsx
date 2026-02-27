@@ -34,53 +34,53 @@ export default function Testimonial() {
   const [paginationEl, setPaginationEl] = useState<HTMLDivElement | null>(null);
 
   return (
-    <section className="pt-32.5 pb-20 pl-70 pr-30">
+    <section className="pt-15 lg:pl-70 lg:pr-30">
       <div className="flex flex-col lg:flex-row gap-8">
-        
+
         {/* Left Column: Heading & Controls */}
-        <div className="w-full lg:w-[20%] flex flex-col relative">
-          <Image 
-            src="/images/testimonial_icon.png" 
-            alt="Testimonial Icon" 
-            width={67} 
-            height={67} 
-            className="mb-10" 
+        <div className="w-full lg:w-[20%] flex flex-col items-center lg:items-start text-center lg:text-left relative">
+          <Image
+            src="/images/testimonial_icon.png"
+            alt="Testimonial Icon"
+            width={67}
+            height={67}
+            className="mb-10"
           />
           <h2 className="font-normal text-[38px] leading-12 mb-10">
             Real <br /> Experiences <br /> at Trē
           </h2>
 
-          {/* Hidden entirely if Swiper locks the buttons (e.g., all 3 slides fit on desktop) */}
-          <div className="[&>*:has(.swiper-button-lock)]:hidden">
-            <div className="flex gap-15 mb-5 z-10">
-              
+          {/* Hidden entirely if Swiper locks the buttons */}
+          <div className="[&>*:has(.swiper-button-lock)]:hidden flex flex-col items-center lg:items-start w-full">
+            <div className="flex gap-15 mb-5 z-10 justify-center lg:justify-start">
+
               {/* Prev Button */}
-              <button 
-                ref={setPrevEl} 
+              <button
+                ref={setPrevEl}
                 className="transition-all cursor-pointer [&.swiper-button-disabled]:opacity-20 [&.swiper-button-disabled]:cursor-default hover:[&:not(.swiper-button-disabled)]:brightness-0"
               >
-                 <Image src="/images/left_arrow.svg" alt="Prev" width={20} height={10} /> 
+                <Image src="/images/left_arrow.svg" alt="Prev" width={20} height={10} />
               </button>
 
               {/* Next Button */}
-              <button 
-                ref={setNextEl} 
+              <button
+                ref={setNextEl}
                 className="transition-all cursor-pointer [&.swiper-button-disabled]:opacity-20 [&.swiper-button-disabled]:cursor-default hover:[&:not(.swiper-button-disabled)]:brightness-0"
               >
-                 <Image src="/images/right_arrow.svg" alt="Next" width={20} height={10} />
+                <Image src="/images/right_arrow.svg" alt="Next" width={20} height={10} />
               </button>
             </div>
-            
+
             {/* Pagination */}
-            <div 
-              ref={setPaginationEl} 
-              className="flex gap-2 z-10 [&_.swiper-pagination-bullet-active]:bg-black!"
+            <div
+              ref={setPaginationEl}
+              className="flex justify-center lg:justify-start gap-2 z-10 [&_.swiper-pagination-bullet-active]:bg-black!"
             ></div>
           </div>
         </div>
 
         {/* Right Column: Swiper */}
-        <div className="w-full lg:w-[75%]">
+        <div className="w-full p-[0px_20px_20px_20px] lg:w-[75%]">
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={20}
@@ -111,7 +111,7 @@ export default function Testimonial() {
                   <p className="font-normal text-[18px] leading-6 mb-17.5">
                     {item.text}
                   </p>
-                  
+
                   <div className="flex gap-2.5 items-center">
                     <div>
                       <h4 className="font-bold text-[18px] leading-[100%] font-inter italic uppercase mb-1.25">
@@ -124,7 +124,7 @@ export default function Testimonial() {
             ))}
           </Swiper>
         </div>
-        
+
       </div>
     </section>
   );

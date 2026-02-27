@@ -38,18 +38,18 @@ export default function FAQs() {
   };
 
   return (
-    <section className="py-15">
-      <div className="container mx-auto px-4">
+    <section className="py-14">
+      <div className="container mx-auto lg:px-22.25">
         <h2 className="mb-11.25 text-center text-[32px] font-normal leading-none">
           FAQs
         </h2>
-        <div className="w-85/96 mx-auto">
+        <div className="lg:w-85/96 mx-auto">
           {faqData.map((faq, index) => {
             const isActive = activeIndex === index;
             return (
               <div
                 key={index}
-                className="mb-3.75 overflow-hidden rounded-md bg-brand-blue px-11.25 py-10 text-white shadow-[0_3px_10px_rgba(0,0,0,0.1)] transition-all duration-300"
+                className="mb-3.75 overflow-hidden rounded-md bg-brand-blue px-3.5 py-5 lg:px-11 lg:py-10 text-white shadow-[0_3px_10px_rgba(0,0,0,0.1)] transition-all duration-300"
               >
                 <div
                   className="flex cursor-pointer items-center justify-between gap-5 font-['Inter',sans-serif] text-[18px] font-semibold leading-[1.3] tracking-[0px]"

@@ -2,13 +2,12 @@ import Image from "next/image";
 
 export default function FeelYourBest() {
   return (
-    <section className="py-12.5">
-      {/* Assuming standard container setup, added mx-auto to center it */}
+    <section className="pb-12.5 md:py-12.5">
       <div className="container mx-auto pt-5">
-        <div className="flex justify-between items-center">
+        <div className="flex grow flex-col-reverse md:flex-row justify-center px-1.25 md:gap-6 items-center">
           
           {/* Text Container */}
-          <div className="text-center w-1/2 pl-23">
+          <div className="text-center py-auto mt-7.5 md:w-1/2 md:p-0 xl:pl-23">
             <h2 className="font-normal text-[36px] leading-none mb-1.25">
               Want to Feel Your Best
             </h2>
@@ -25,13 +24,14 @@ export default function FeelYourBest() {
           </div>
 
           {/* Image Container */}
-          <div className="w-1/2">
+          {/* Added w-full for mobile, and max-w-[550px] to cap the growth on desktop */}
+          <div className="w-full md:w-1/2 max-w-137.5 mx-auto"> 
             <Image
               src="/images/want-to-feel-your.png" 
               alt="Want to feel your best"
-              width={618}
-              height={412}
-              className="rounded-[15px] max-w-full h-auto" 
+              width={620}
+              height={572}
+              className="w-full h-auto rounded-[15px]" 
             />
           </div>
 
