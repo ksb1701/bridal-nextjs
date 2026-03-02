@@ -89,7 +89,7 @@ export default function Testimonial() {
             breakpoints={{
               320: { slidesPerView: 1, spaceBetween: 20 },
               768: { slidesPerView: 2, spaceBetween: 30 },
-              1024: { slidesPerView: 3, spaceBetween: 30 },
+              1440: { slidesPerView: 3, spaceBetween: 30 },
             }}
             // Bind the state-managed DOM nodes here
             navigation={{

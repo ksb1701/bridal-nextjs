@@ -45,7 +45,7 @@ export default function InquiryForm({ heading }: InquiryFormProps) {
   const baseInputClass = "font-['Nimbus',sans-serif] h-[51px] bg-[#F2F2F2] rounded-[10px] border border-[#D8D8D8] font-normal text-[18px] leading-none px-[20px] outline-none w-full";
 
   return (
-    <section className="py-12.5 lg:py-20 bg-[#F7FCFFBF]">
+    <section className="py-12.5 xl:py-20 bg-[#F7FCFFBF]">
       <div className="container mx-auto px-4">
         <div className="w-full">
           <h2 className="font-['Nimbus',sans-serif] font-normal italic text-[28px] md:text-[36px] leading-9 text-center uppercase mb-10">
@@ -54,12 +54,12 @@ export default function InquiryForm({ heading }: InquiryFormProps) {
           
           <form
             onSubmit={handleSubmit(onSubmit)} id="eform" name="eform"
-            // Keep grid through 'md'. Only switch to flex at 'lg'.
-            className="grid grid-cols-2 xs:grid-cols-3 gap-4 lg:flex lg:flex-row lg:flex-nowrap lg:gap-[1.3%] w-full lg:w-85/96 mx-auto"
+            // Keep grid through 'md'. Only switch to flex at 'xl'.
+            className="grid grid-cols-2 xs:grid-cols-3 gap-4 xl:flex xl:flex-row xl:flex-nowrap xl:gap-[1.3%] w-full xl:w-[80%] mx-auto"
           >
             {/* Full Name */}
-            {/* xs: takes full row | md: takes 1/3 row | lg: flexes */}
-            <div className="col-span-2 xs:col-span-3 md:col-span-1 lg:w-[16%] relative lg:flex-1">
+            {/* xs: takes full row | md: takes 1/3 row | xl: flexes */}
+            <div className="col-span-2 xs:col-span-3 md:col-span-1 xl:w-[16%] relative xl:flex-1">
               <input
                 type="text" id="FullName" placeholder="Full Name*"
                 className={`${baseInputClass} w-full`} {...register("full_name")}
@@ -68,7 +68,7 @@ export default function InquiryForm({ heading }: InquiryFormProps) {
             </div>
 
             {/* Contact Number */}
-            <div className="col-span-2 xs:col-span-3 md:col-span-1 lg:w-[16%] relative lg:flex-1">
+            <div className="col-span-2 xs:col-span-3 md:col-span-1 xl:w-[16%] relative xl:flex-1">
               <input
                 type="tel" id="ContactNumber" placeholder="Contact Number*"
                 className={`${baseInputClass} w-full`} {...register("contact_number")}
@@ -77,7 +77,7 @@ export default function InquiryForm({ heading }: InquiryFormProps) {
             </div>
 
             {/* Email Address */}
-            <div className="col-span-2 xs:col-span-3 md:col-span-1 lg:w-[16%] relative lg:flex-1">
+            <div className="col-span-2 xs:col-span-3 md:col-span-1 xl:w-[16%] relative xl:flex-1">
               <input
                 type="email" id="EmailAddress" placeholder="Email Address*"
                 className={`${baseInputClass} w-full`} {...register("email_address")}
@@ -86,7 +86,7 @@ export default function InquiryForm({ heading }: InquiryFormProps) {
             </div>
 
             {/* Wedding Date */}
-            <div className="col-span-1 xs:col-span-1 md:col-span-1 lg:w-[16%] relative lg:flex-1 flex items-center bg-[#F2F2F2] rounded-[10px] border border-[#D8D8D8] px-2 md:px-5 h-12.75">
+            <div className="col-span-1 xs:col-span-1 md:col-span-1 xl:w-[16%] relative xl:flex-1 flex items-center bg-[#F2F2F2] rounded-[10px] border border-[#D8D8D8] px-2 md:px-5 h-12.75">
               <input
                 className={`${baseInputClass} w-full bg-transparent! border-none! h-full! px-0! outline-none!`}
                 type="text" id="wedding_date" placeholder="Wedding Date"
@@ -97,7 +97,7 @@ export default function InquiryForm({ heading }: InquiryFormProps) {
             </div>
 
             {/* Retreat Date */}
-            <div className="col-span-1 xs:col-span-1 md:col-span-1 lg:w-[16%] relative lg:flex-1 flex items-center bg-[#F2F2F2] rounded-[10px] border border-[#D8D8D8] px-2 md:px-5 h-12.75">
+            <div className="col-span-1 xs:col-span-1 md:col-span-1 xl:w-[16%] relative xl:flex-1 flex items-center bg-[#F2F2F2] rounded-[10px] border border-[#D8D8D8] px-2 md:px-5 h-12.75">
               <input
                 className={`${baseInputClass} w-full bg-transparent! border-none! h-full! px-0! outline-none!`}
                 type="text" id="retreat_date" placeholder="Retreat Dates*"
@@ -110,7 +110,7 @@ export default function InquiryForm({ heading }: InquiryFormProps) {
             {/* Submit Button */}
             <button 
               type="submit"
-              className="col-span-2 xs:col-span-1 md:col-span-1 w-full lg:w-auto font-inter font-bold text-[18px] md:text-[20px] leading-none text-center uppercase text-white px-2 md:px-12.5 h-12.75 rounded-[10px] bg-brand-blue cursor-pointer hover:bg-[#2d4e62] transition-colors duration-200"
+              className="col-span-2 xs:col-span-1 md:col-span-1 w-full xl:w-auto font-inter font-bold text-[18px] md:text-[20px] leading-none text-center uppercase text-white px-2 md:px-12.5 h-12.75 rounded-[10px] bg-brand-blue cursor-pointer hover:bg-[#2d4e62] transition-colors duration-200"
             >
               Submit
             </button>

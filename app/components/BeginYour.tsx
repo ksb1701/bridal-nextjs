@@ -14,7 +14,9 @@ export default function BeginYour() {
           </div>
 
           {/* Text Container */}
-          <div className="w-full text-center md:text-left md:w-1/2 md:pl-11.25">
+          {/* 1. Added items-center and text-center for default mobile state */}
+          {/* 2. Added md:items-start to override the centering on larger screens */}
+          <div className="flex flex-col items-center text-center w-full md:items-start md:text-left md:w-1/2 md:pl-11.25">
             <h2 className="font-normal text-[28px] leading-8 mb-2.5">
               Begin Your
             </h2>
@@ -55,7 +57,8 @@ export default function BeginYour() {
             
             <a
               href="#form_bottom"
-              className="font-normal text-[18px] leading-6 text-center uppercase text-white bg-brand-blue py-4.25 px-12.5 block max-w-93.75 rounded-[15px] mt-18.75 hover:opacity-90 transition-opacity"
+              /* 3. Changed lg:mx-0 to md:mx-0 so the button aligns left at the same time the text does */
+              className="font-normal text-[18px] leading-6 text-center uppercase text-white bg-brand-blue py-4.25 px-12.5 block max-w-93.75 rounded-[15px] mx-auto md:mx-0 mt-18.75 hover:opacity-90 transition-opacity"
             >
               Book Your Bridal Wellness Consultation
             </a>

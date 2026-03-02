@@ -8,10 +8,10 @@ export default function FeelYourBest() {
           
           {/* Text Container */}
           <div className="text-center py-auto mt-7.5 md:w-1/2 md:p-0 xl:pl-23">
-            <h2 className="font-normal text-[36px] leading-none mb-1.25">
+            <h2 className="font-normal text-[28px] xs:text-[36px] leading-none mb-1.25">
               Want to Feel Your Best
             </h2>
-            <h3 className="font-thin text-[50px] leading-12.5 underline decoration-2 mb-10">
+            <h3 className="font-thin text-[38px] xs:text-[50px] leading-12.5 underline decoration-2 mb-10">
               For the Big Day?
             </h3>
             

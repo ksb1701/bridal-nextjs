@@ -23,7 +23,7 @@ export default function CanJoin() {
             {eligibleGroups.map((text, index) => (
               <p
                 key={index}
-                className="font-normal text-[18px] xs:text-[28px] leading-none text-center xs:text-left py-3.5 xs:py-6.25 border-t border-[#333] first:pt-0 first:border-none"
+                className="font-normal text-[18px] xs:text-[28px] leading-none text-center md:text-left py-3.5 xs:py-6.25 border-t border-[#333] first:pt-0 first:border-none"
               >
                 {text}
               </p>
