@@ -4,10 +4,11 @@ export default function FeelYourBest() {
   return (
     <section className="pb-12.5 md:py-12.5">
       <div className="container mx-auto pt-5">
-        <div className="flex grow flex-col-reverse md:flex-row justify-center px-1.25 md:gap-6 items-center">
+        {/* Swapped justify-center for justify-between to utilize the full container width */}
+        <div className="flex grow flex-col-reverse md:flex-row justify-between px-1.25 md:gap-10 items-center">
           
-          {/* Text Container */}
-          <div className="text-center py-auto mt-7.5 md:w-1/2 md:p-0 xl:pl-23">
+          {/* Text Container: Changed md:w-1/2 to flex-1 */}
+          <div className="text-center py-auto mt-7.5 flex-1 md:p-0 xl:pl-15">
             <h2 className="font-normal text-[28px] xs:text-[36px] leading-none mb-1.25">
               Want to Feel Your Best
             </h2>
@@ -23,15 +24,15 @@ export default function FeelYourBest() {
             </p>
           </div>
 
-          {/* Image Container */}
-          {/* Added w-full for mobile, and max-w-[550px] to cap the growth on desktop */}
-          <div className="w-full md:w-1/2 max-w-137.5 mx-auto"> 
+          {/* Image Container: Changed md:w-1/2 to flex-1, removed max-w-140 and mx-auto */}
+          <div className="w-full flex-1 flex justify-start"> 
             <Image
               src="/images/want-to-feel-your.png" 
               alt="Want to feel your best"
               width={620}
               height={572}
-              className="w-full h-auto rounded-[15px]" 
+              /* Added max-w-[620px] to match your intrinsic image width without restricting it too early */
+              className="w-full h-auto max-w-155 rounded-[15px]" 
             />
           </div>
 
